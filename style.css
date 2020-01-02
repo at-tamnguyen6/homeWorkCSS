@@ -11,12 +11,28 @@ body {
   margin: 0px 150px;
 }
 
-.header-top-left {
-  float: left;
+.header-top {
+  display: grid;
+  grid-template-columns: auto 30%;
 }
 
 .header-top-right {
-  float: right;
+  transform: translateY(50%);
+  display: flex;
+}
+
+.header-top-right i {
+  border: 1px solid #62c6f8;
+  color: #62c6f8;
+  size: 10px;
+  border-radius: 50%;
+  height: fit-content;
+  padding: 3px;
+}
+
+.header-top-left {
+  display: flex;
+  margin-top: 10px;
 }
 
 .header-top-left img {
@@ -209,6 +225,9 @@ footer {
   grid-template-columns: auto auto auto;
   background-color: rgba(89, 208, 230, 0.671);
   width: 100vw;
+  position: absolute;
+  left: 0px;
+  padding-left: 150px;
 }
 
 footer a {
@@ -222,4 +241,11 @@ footer ul {
 
 footer li {
   margin: 10px 0px;
+}
+
+.footer-content::after {
+  content: "";
+  clear: both;
+  display: table;
+  border-top: 1px solid white;
 }
